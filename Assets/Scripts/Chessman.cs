@@ -48,12 +48,31 @@ public class Chessman : MonoBehaviour
         float x = xBoard;
         float y = yBoard;
 
-        x *= 0.66f;
-        y *= 0.66f;
+        x *= 1.023f;
+        y *= 1.023f;
 
-        x += -2.3f;
-        y += -2.3f;
+        x += -3.57f;
+        y += -3.19f;
 
         this.transform.position = new Vector3(x, y, -1.0f);
+    }
+
+    public int GetXBoard()
+    {
+        return xBoard;
+    }
+
+    public int GetYBoard() {
+        return yBoard;
+    }
+
+    public void SetXBoard(int x)
+    {
+        xBoard = x;
+    }
+
+    public void SetYBoard(int y)
+    {
+        yBoard = y;
     }
 }
