@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2633790554199858411}
   - component: {fileID: 7099360940401400822}
+  - component: {fileID: 1920348946739756421}
   m_Layer: 0
   m_Name: Chesspiece
   m_TagString: Untagged
@@ -91,3 +92,29 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1920348946739756421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4171481717845933872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d1c05b2cd51a0f498db8de672d1c236, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Chessman
+  controller: {fileID: 0}
+  movePlate: {fileID: 0}
+  black_queen: {fileID: -2628853326628446179, guid: b8fc2e9a257dd63498f133afd38a1f9c, type: 3}
+  black_king: {fileID: -641104846605737351, guid: 78e65d3099d2e034f873f452d75c8932, type: 3}
+  black_bishop: {fileID: -6414592721767173361, guid: 5963c5c0d0a551649a8e0c3412365c1b, type: 3}
+  black_knight: {fileID: -334450713805299198, guid: d8edccf9891e5e245ad252cf2a44af0e, type: 3}
+  black_rook: {fileID: -7587791273309554880, guid: de50ee7747de631479ffb5889c2476c3, type: 3}
+  black_pawn: {fileID: -4341603147912474925, guid: ba822ab20d7936049b6ab98d455fd48e, type: 3}
+  white_queen: {fileID: 7270707491364550308, guid: 325bd728bdac59641940592a22f559bb, type: 3}
+  white_king: {fileID: -3792998861040722889, guid: 65b0f9812094f8d4c8c79702cadf9e91, type: 3}
+  white_bishop: {fileID: 7560534232159598683, guid: d8abbef947b9cea40bfa9ba42f3ee718, type: 3}
+  white_knight: {fileID: 8769669200613306614, guid: 20faa2c8d0a7d544dbab247e798d9d54, type: 3}
+  white_rook: {fileID: -8948728166497563328, guid: 638f05914bc09154cb43bca831bd28df, type: 3}
+  white_pawn: {fileID: 5580225292014371162, guid: ceef4f5e38537d3428b95bb151bc84d9, type: 3}
