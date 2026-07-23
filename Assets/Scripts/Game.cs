@@ -60,4 +60,31 @@ public class Game : MonoBehaviour
         if (x < 0 || y < 0 || x >=positions.GetLength(0) || y >= positions.GetLength(1)) return false;
         return true;
     }
+    public string GetCurrentPlayer()
+    {
+        return currentPlayer;
+    }
+
+    public bool IsGameOver()
+    {
+        return gameOver;
+    }
+
+    public void NextTurn()
+    {
+        if (currentPlayer == "white")
+        {
+            currentPlayer = "black";
+        }
+        else
+        {
+            currentPlayer = "white";
+        }
+    }
+
+    public void Winner(string playerWinner)
+    {
+        gameOver = true;
+        Debug.Log("¡El ganador es el jugador " + playerWinner + "!");
+    }
 }

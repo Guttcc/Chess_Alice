@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2633790554199858411}
   - component: {fileID: 7099360940401400822}
   - component: {fileID: 1920348946739756421}
+  - component: {fileID: -6067203190672405984}
   m_Layer: 7
   m_Name: Chesspiece
   m_TagString: Untagged
@@ -105,7 +106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Chessman
   controller: {fileID: 0}
-  movePlate: {fileID: 0}
+  movePlate: {fileID: 7856908082800336349, guid: 9c2517397dfe73e47b7903b2d15c99ad, type: 3}
   black_queen: {fileID: -2628853326628446179, guid: b8fc2e9a257dd63498f133afd38a1f9c, type: 3}
   black_king: {fileID: -641104846605737351, guid: 78e65d3099d2e034f873f452d75c8932, type: 3}
   black_bishop: {fileID: -6414592721767173361, guid: 5963c5c0d0a551649a8e0c3412365c1b, type: 3}
@@ -118,3 +119,49 @@ MonoBehaviour:
   white_knight: {fileID: 8769669200613306614, guid: 20faa2c8d0a7d544dbab247e798d9d54, type: 3}
   white_rook: {fileID: -8948728166497563328, guid: 638f05914bc09154cb43bca831bd28df, type: 3}
   white_pawn: {fileID: 5580225292014371162, guid: ceef4f5e38537d3428b95bb151bc84d9, type: 3}
+--- !u!61 &-6067203190672405984
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4171481717845933872}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.136842, y: 3.3263159}
+    newSize: {x: 2.03, y: 3.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 2.136842, y: 3.3263159}
+  m_EdgeRadius: 0
