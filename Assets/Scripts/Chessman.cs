@@ -49,7 +49,7 @@ public class Chessman : MonoBehaviour
         float y = yBoard;
 
         x *= 1.023f;
-        y *= 1.023f;
+        y *= 0.975f;
 
         x += -3.57f;
         y += -3.19f;
@@ -236,12 +236,12 @@ public class Chessman : MonoBehaviour
         float y = matrixY;
 
         x *= 1.023f;
-        y *= 1.023f;
+        y *= 0.975f;
 
         x += -3.57f;
         y += -3.19f;
 
-        GameObject mp = Instantiate(movePlate, new Vector3(x, y, -3.0f), Quaternion.identity);
+        GameObject mp = Instantiate(movePlate, new Vector3(x, y, -5.0f), Quaternion.identity);
 
         MovePlate mpScript = mp.GetComponent<MovePlate>();
         mpScript.SetReference(gameObject);
@@ -254,12 +254,12 @@ public class Chessman : MonoBehaviour
         float y = matrixY;
 
         x *= 1.023f;
-        y *= 1.023f;
+        y *= 0.975f;
 
         x += -3.57f;
         y += -3.19f;
 
-        GameObject mp = Instantiate(movePlate, new Vector3(x, y, -3.0f), Quaternion.identity);
+        GameObject mp = Instantiate(movePlate, new Vector3(x, y, -5.0f), Quaternion.identity);
 
         MovePlate mpScript = mp.GetComponent<MovePlate>();
         mpScript.attacked = true;
