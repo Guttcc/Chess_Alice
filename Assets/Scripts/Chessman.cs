@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class Chessman : MonoBehaviour
 {
@@ -29,6 +30,7 @@ public class Chessman : MonoBehaviour
             case "black_queen": this.GetComponent<SpriteRenderer>().sprite = black_queen; player = "black"; break;
             case "black_king": this.GetComponent<SpriteRenderer>().sprite = black_king; player = "black"; break;
             case "black_bishop": this.GetComponent<SpriteRenderer>().sprite = black_bishop; player = "black"; break;
+            case "black_bishop_right": this.GetComponent<SpriteRenderer>().sprite = black_bishop; this.GetComponent<SpriteRenderer>().flipX = true; player = "black"; break;
             case "black_knight": this.GetComponent<SpriteRenderer>().sprite = black_knight; player = "black"; break;
             case "black_rook": this.GetComponent<SpriteRenderer>().sprite = black_rook; player = "black"; break;
             case "black_pawn": this.GetComponent<SpriteRenderer>().sprite = black_pawn; player = "black"; break;
@@ -37,6 +39,7 @@ public class Chessman : MonoBehaviour
             case "white_queen": this.GetComponent<SpriteRenderer>().sprite = white_queen; player = "white"; break;
             case "white_king": this.GetComponent<SpriteRenderer>().sprite = white_king; player = "white"; break;
             case "white_bishop": this.GetComponent<SpriteRenderer>().sprite = white_bishop; player = "white"; break;
+            case "white_bishop_right": this.GetComponent<SpriteRenderer>().sprite = white_bishop; this.GetComponent<SpriteRenderer>().flipX = true; player = "white"; break;
             case "white_knight": this.GetComponent<SpriteRenderer>().sprite = white_knight; player = "white"; break;
             case "white_rook": this.GetComponent<SpriteRenderer>().sprite = white_rook; player = "white"; break;
             case "white_pawn": this.GetComponent<SpriteRenderer>().sprite = white_pawn; player = "white"; break;
@@ -117,6 +120,8 @@ public class Chessman : MonoBehaviour
                 break;
             case "black_bishop":
             case "white_bishop":
+            case "black_bishop_right":
+            case "white_bishop_right":
                 LineMovePlate(1, 1);
                 LineMovePlate(-1, -1);
                 LineMovePlate(-1, 1);
@@ -263,5 +268,18 @@ public class Chessman : MonoBehaviour
         mpScript.attacked = true;
         mpScript.SetReference(gameObject);
         mpScript.SetCoords(matrixX, matrixY);
+
+        // Temporal Luz Roja sobre Rey
+        GameObject targetPiece = controller.GetComponent<Game>().GetPosition(matrixX, matrixY);
+
+
+        if (targetPiece != null && (targetPiece.name == "white_king" || targetPiece.name == "black_king"))
+        {
+            Light2D light2D = mp.GetComponent<Light2D>();
+            if (light2D != null)
+            {
+                light2D.color = Color.red;
+            }
+        }
     }
 }
