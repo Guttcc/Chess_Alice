@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Game : MonoBehaviour
 {
@@ -82,9 +84,22 @@ public class Game : MonoBehaviour
         }
     }
 
+    public void Update()
+    {
+        if (gameOver == true && Input.GetMouseButtonDown(0))
+        {
+            gameOver = false;
+
+            SceneManager.LoadScene("Game");
+        }
+    }
+
     public void Winner(string playerWinner)
     {
         gameOver = true;
-        Debug.Log("¡El ganador es el jugador " + playerWinner + "!");
+        GameObject.FindGameObjectWithTag("WinnerText").GetComponent<Text>().enabled = true;
+        GameObject.FindGameObjectWithTag("WinnerText").GetComponent<Text>().text = playerWinner + " is the winner";
+
+        GameObject.FindGameObjectWithTag("RestartText").GetComponent<Text>().enabled = true;
     }
 }
